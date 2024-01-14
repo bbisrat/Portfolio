@@ -213,10 +213,10 @@ body {
     background-size: cover;
     background-attachment: fixed; 
 }
-/* Not sure about this? */
-main {
+
+/* main {
     flex: 1 0 auto; 
-}
+} */
 
 /* typed intro */
 .intro{
@@ -261,7 +261,7 @@ button{
 }
 .container .card .face.face1{
     position: relative;
-    background: #053f3f; /*background color for the box*/
+    background: #053f3f;
     display: flex;
     justify-content: center;
     align-content:center;
@@ -479,7 +479,7 @@ button{
 }
 .project img {
     width: 100%;
-    border-radius: 10px 10px 10px 10px; /* Round top corners */
+    border-radius: 10px 10px 10px 10px;
     display: block;
 }
 .layer{
@@ -543,7 +543,6 @@ button{
     height: 56%;
 }
 
-
 /* ------------------------------------ CONTACT PAGE ---------------------------------- */
 .contact-left{
     flex-basis: 35%;
@@ -574,36 +573,134 @@ button{
     margin-top: 100px;
 }
 
-/* ------------------------------------ CREDENTIALS PAGE ---------------------------------- */
-.timeline-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+/* ------------------------------------ WORK PAGE ---------------------------------- */
+.timeline{
+    position: relative;
+    max-width: 1000px;
+    margin: 100px auto;
+    display: center;
+    justify-content: center;
     align-items: center;
-    margin: 20px 0;
+}
+/* container */
+.timeline .container {
+    padding: 10px 50px;
+    position: center;
+    width: 50%;    
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.timeline .container:nth-child(1){
+    animation-delay: 0s;
+}
+.timeline .container:nth-child(2){
+    animation-delay: 2s;
+}
+.timeline .container:nth-child(3){
+    animation-delay: 3s;
+}
+.timeline .container:nth-child(4){
+    animation-delay: 4s;
 }
 
-.timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.timeline .text-box{
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
 }
-
-.timeline-icon img {
-    height: 40px; /* Adjust size as needed */
-    width: auto;
+.text-box p {
+    font-size: 15px;
+    color: #000;
+}
+.text-box li {
+    font-size: 15px;
+    color: #000;
+}
+.text-box h2{
+    font-weight: 600;
+    font-size: 18px;
+    color: #021515;
+}
+.text-box small{
+    display: inline-block;
     margin-bottom: 10px;
 }
-
-
-
+.left-container{
+    right: 30%;
+}
+.right-container{
+    left: 30%;
+}
+.timeline .container img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+.right-container img{
+    left: -20px;
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;  
+    animation: moveline 6s linear forwards;
+}
+@keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left: 15px solid white;
+    right: -15px;
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-right: 15px solid white;
+    left: -14px;
+}
 
 
 /* ------------------------------------ ------------ ---------------------------------- */
 /* ------------------------------------ CSS for SMALLER SCREENS ------------------------- */
 @media only screen and (max-width: 600px){
-    
     /* home page -intro */
     .intro h4{
         font-size: 75px;
@@ -631,27 +728,39 @@ button{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
-}
-
-
-
-
-
- /* ---------------------------------------------------------------------------------------------------- */
- /* intresting way for a loader */
-/* .loader {
-    width: 150px;
-    height: 150px;
-    border-left: 5px solid #38ff8e;
-    border-radius: 50%;
-    animation: right5231 0.9s linear infinite;
-}
-
-@keyframes right5231 {
-    0% {
-        transform: rotate(0deg);
+    /* work page -timeline */
+    .timeline{
+        margin: 5px auto;
     }
-    100% {
-        transform: rotate(360deg);
+    .timeline::after{
+        left: 31px;
     }
-} */
+    .timeline .container{
+        width: 80%;
+        padding-left: 29px;
+        padding-right: 2px;
+    }
+    .text-box{
+        font-size: 10px;
+    }
+    .text-box small{
+        margin-bottom: 10px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container{
+        right: 0px;
+    }
+    .right-container img{
+        left: -30px;
+    }
+    .left-container img {
+        left: -30px;
+    }
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+}
