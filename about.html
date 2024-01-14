@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | About</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="generic-page">
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="logo">
+            <a href="index.html">
+                <div class="square-outline">
+                    B
+                </div>
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="projects.html" type= "text">Projects</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!---------------- about ------------------------>
+    <div id="about">
+        <div class="container"></div>
+          <div class="row">
+            <div class="about-col-1"> <!-- image -->
+                <img src="images/Bethel.jpg">
+            </div>
+            <div class="about-col-2"> <!-- text -->
+                <!-- <div class="titles"> -->
+                    <h2 class="sub-title">About Me </h2>
+                    <p>Hi, I'm Betel Bisrat, a Computer Science student at Carleton University, 
+                       with a stream in AI and Machine Learning, and a minor in Psychology. My
+                       academic journey is complemented by a passion for personal projects
+                       where I continuously apply and expand my knowledge in the field.<br><br>
+
+                       I've developed proficiency in various programming languages and
+                       technologies, including Python, Java, JavaScript, HTML/CSS, and 
+                       database management with MySQL, SQL, and SQLite3. My development 
+                       environment is diverse, covering both Linux and Windows platforms, and  
+                       I'm proficient in using tools like VS Code and IntelliJ, along with version
+                       control systems such as GitHub/Git.<br><br>
+
+                      Additionally, I have a keen interest in expanding my knowledge, 
+                      especially in areas that spark my curiosity, through videos and earning 
+                      certifications.<br><br>
+                      
+                      As I continue to grow and learn in this dynamic field, I am eager to apply 
+                      my skills and knowledge in practical settings. I'm committed to contributing 
+                      innovative solutions to complex challenges and solving problems in the field of 
+                      software engineering.</p>                     
+                    <div class="tab-titles">               
+                      <p class="tab-links active-link" onclick="opentab('volunteer')">Volunteer</p>
+                      <p class="tab-links" onclick="opentab('member')">Member</p>
+                      <p class="tab-links" onclick="opentab('publications')">Publications</p>
+                  </div>
+                    <div class="tab-content active-tab" id="publications">
+                      <ul>
+                        <li><span>Freedom Second Edition</span>
+                          <br><br>2023<br><br>  
+                            In September 2023, the second edition of "Freedom" 
+                            was published, featuring revisions, enhancements, 
+                            and additional content that enhances the collection for 
+                            both new and existing readers.</li>
+                        <li><span>Freedom</span> 
+                          <br><br>2020<br><br>
+                            In February 2020, at the age of 16, 
+                            I published my first book, "Freedom," 
+                            with Ukiyoto Publishing. This collection 
+                            of poetry delves into various themes, such as culture, 
+                            freedom, and self-discovery. </li>                      
+                      </ul>
+                    </div>
+                    <div class="tab-content" id="volunteer">
+                      <ul>
+                        <li><span>Carleton Student Engineering Society</span>
+                          <br><br>2022<br><br>  
+                            As a volunteer I helped orgaize a 
+                            successful two-day event, fostering engagement and 
+                            collaboration within the engineering student community. </li> 
+                        <li><span>Teacher Assistance</span>
+                          <br><br>2019-2020<br><br>
+                            As a committed school volunteer, I enhanced student 
+                            life by teaching, managing the library, maintaining computers, 
+                            and organizing events, while also donating essential educational 
+                            resources. My efforts fostered a focused learning environment,
+                            efficient teaching, and a strong sense of community among students.</li>
+                      </ul>
+                    </div>
+                    <div class="tab-content" id="member">
+                      <ul>
+                        <li><span>Carleton Women in Computer Science</span>
+                          <br><br>2023- present<br><br>  
+                            As an active member I have had the opportunity to attend key conferences,  
+                            gaining invaluable insights into the latest industry trends and developments.  
+                            My participation in these events has not only enhanced my technical knowledge 
+                            but has also allowed me to contribute to important conversations on the evolving 
+                            role of women in the tech sector.</li>
+                        <li><span>Women in Engineering & IT</span>
+                          <br><br>2022- present<br><br>   
+                            In my role with Women in Engineering & IT, I enhance my professional skills and industry 
+                            knowledge through active networking, participating in workshops, and contributing to 
+                            initiatives that empower women in tech, reflecting my commitment to both personal and 
+                            industry growth.</li>                                 
+                      </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+  var tablinks = document.getElementsByClassName('tab-links');
+var tabcontents = document.getElementsByClassName('tab-content')
+
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+
+<!------ footer -------->
+    <!-- <footer>
+        <p>&copy; 2024 by Betel Bisrat</p>
+    </footer> -->
+</body>
+</html>
