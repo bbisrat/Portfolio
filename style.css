@@ -1,10 +1,3 @@
-/* ------------------ inprogress page ---------------- */
-/* TO BE REMOVED */
-.in-progress{
-    color: white;
-    font-size: 60px;
-}
-
 /* -------------------------------- INDEX PAGE --------------------------------- */
 .portfolio-button {
     position: absolute;
@@ -140,7 +133,7 @@ p{
     color: white;
     margin-left: 12px;
     text-decoration: none;
-    margin-right: 25px; /* Spacing between logo and navigation */
+    margin-right: 25px; 
 }
 
 /* Square outline */
@@ -149,10 +142,10 @@ p{
     height: 50px;
     border: 5px double #07c207;
     border-radius: 5px;
-    box-sizing: border-box; /* Include border in element dimensions */
+    box-sizing: border-box; 
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center; 
+    align-items: center; 
 }
 
 /* menu */
@@ -206,7 +199,6 @@ body {
 .page-container  {
     justify-content: center;
     align-items: center;
-    /* background of the page */
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/background.jpg);
     background-position: center;
     background-size: cover;
@@ -214,7 +206,6 @@ body {
 }
 .generic-page{
     background-color: #032424;
-    /* flex: 1; */
 }
 .contact-page{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/background.jpg);
@@ -222,9 +213,8 @@ body {
     background-size: cover;
     background-attachment: fixed; 
 }
-/* Not sure about this? */
 main {
-    flex: 1 0 auto; /* Let the main content grow, but don't let it shrink */
+    flex: 1 0 auto; 
 }
 
 /* typed intro */
@@ -258,7 +248,7 @@ button{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto; /* Center the container horizontally */
+    margin: 0 auto; 
 }
 .container .card{
     position: relative;
@@ -270,7 +260,7 @@ button{
 }
 .container .card .face.face1{
     position: relative;
-    background: #053f3f; /*background color for the box*/
+    background: #053f3f; 
     display: flex;
     justify-content: center;
     align-content:center;
@@ -345,6 +335,37 @@ button{
     background: #333 ;
     color: whitesmoke; 
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+
+/* ---- contact ----- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #0f0;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.social-icons a{
+    color: #0f0;
+    font-size: 100px;
+    margin-top: 60px;
+
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover {
+    color: white;
+    transform: translateY(-50px);
+}
+.contact-right{
+    flex-basis: 20%;
+    margin-top: 100px;
 }
 
 /* ------------------------------------ ABOUT ME PAGE ---------------------------------- */
@@ -442,9 +463,9 @@ button{
 
 }
 .project-rectangle h3{
-    background-color: #021515; /* Set your desired background color */
-    padding: 50px; /* Adjust padding as needed */
-    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    background-color: #021515;
+    padding: 50px; 
+    border-radius: 0 0 10px 10px; 
     
     text-align: center;
     color: #0f0;
@@ -457,7 +478,7 @@ button{
 }
 .project img {
     width: 100%;
-    border-radius: 10px 10px 10px 10px; /* Round top corners */
+    border-radius: 10px 10px 10px 10px; 
     display: block;
 }
 .layer{
@@ -491,7 +512,7 @@ button{
     text-align: left; 
 }
 .layer ul:before {
-    content: "Utilized software:"; /* Adding a title to the list */
+    content: "Utilized software:";
     font-size: 16px;
     font-weight: bold; 
     display: block; 
@@ -520,62 +541,6 @@ button{
 .project:hover .layer{
     height: 56%;
 }
-
-
-/* ------------------------------------ CONTACT PAGE ---------------------------------- */
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
-    color: #0f0;
-    margin-right: 15px;
-    font-size: 20px;
-}
-.social-icons a{
-    color: #0f0;
-    font-size: 100px;
-    margin-top: 60px;
-
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.social-icons a:hover {
-    color: white;
-    transform: translateY(-50px);
-}
-.contact-right{
-    flex-basis: 20%;
-    margin-top: 100px;
-}
-
-/* ------------------------------------ CREDENTIALS PAGE ---------------------------------- */
-.timeline-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.timeline-icon img {
-    height: 40px; /* Adjust size as needed */
-    width: auto;
-    margin-bottom: 10px;
-}
-
-
-
 
 
 /* ------------------------------------ ------------ ---------------------------------- */
@@ -612,25 +577,3 @@ button{
     }
 }
 
-
-
-
-
- /* ---------------------------------------------------------------------------------------------------- */
- /* intresting way for a loader */
-/* .loader {
-    width: 150px;
-    height: 150px;
-    border-left: 5px solid #38ff8e;
-    border-radius: 50%;
-    animation: right5231 0.9s linear infinite;
-}
-
-@keyframes right5231 {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} */
