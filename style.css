@@ -612,7 +612,6 @@ button{
 .timeline .container:nth-child(4){
     animation-delay: 4s;
 }
-
 .timeline .text-box{
     padding: 20px 30px;
     background: #fff;
@@ -631,6 +630,11 @@ button{
 .text-box h2{
     font-weight: 600;
     font-size: 18px;
+    color: #021515;
+}
+.text-box h3{
+    font-size: 13px;
+    margin-top: 0;
     color: #021515;
 }
 .text-box small{
@@ -696,7 +700,6 @@ button{
     border-right: 15px solid white;
     left: -14px;
 }
-
 
 /* ------------------------------------ ------------ ---------------------------------- */
 /* ------------------------------------ CSS for SMALLER SCREENS ------------------------- */
